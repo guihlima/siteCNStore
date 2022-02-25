@@ -1,0 +1,34 @@
+
+.main .carrossel{
+        width: 200px;
+        outline: 3px solid #000;
+
+        margin: 0px auto;
+        /* overflow: hidden; */
+    }
+
+    .main .carrossel #destaques{
+        display: flex;
+        align-items: center;
+        width: 400px;
+    }
+    .main .carrossel li{
+        position: relative;
+        animation: slide 30s infinite ease-out;
+    }
+
+    /* @keyframes slide {
+        0%{left: 0px;}
+        20%{left: 0px;}
+        30%{left: -200px;}
+        50%{left: -200px;}
+        60%{left: 0px;} 
+        60%{left: -400px};
+        50%{left: -200px;}
+
+        100%{left: -400px;}
+    } */
+
+    .main .carrossel #destaques img{
+        width: 200px;
+    }
