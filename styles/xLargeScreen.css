@@ -1,0 +1,35 @@
+@import url(./reset.css);
+
+@media screen and (min-width: 1280px){
+    .nav #menu__list .list__item{
+        padding: 5px;
+        font-size: 1.4rem;
+    }
+
+    .nav #logo{
+        font-size: 1.8rem;
+    }
+
+    .nav #menu i, .nav #menu a{
+        padding: 5px;
+        font-size: 1.4rem;
+    }
+
+    .main #cards{
+        /* width: 10%; */
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+    }
+    .main #cards #card{
+        width: 90%;
+    }
+
+    .main #card a{
+        width: 50%;
+        
+    }
+    .main #card a img:hover{
+        transform: scale(1.5, 1.5);
+    }
+
+}

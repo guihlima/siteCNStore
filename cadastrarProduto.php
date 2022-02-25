@@ -14,6 +14,7 @@
         
         $descricao = $_POST['descricao'];
         $preco = $_POST['preco'];
+        $quantidade = $_POST['qtdd'];
         // $title = $_POST['title-notice'];
         // $description = $_POST['description'];
         // $categoria = $_POST['category'];
@@ -21,7 +22,7 @@
         $moveu = move_uploaded_file($arquivo['tmp_name'], $path);
     
         if($moveu){
-            $mysqli->query("INSERT INTO produtos (descricao, preco, nomeImg, path) VALUES('$descricao','$preco','$nomeArquivo','$path')") or die($mysqli->error);
+            $mysqli->query("INSERT INTO produtos (descricao, preco, nomeImg, path, quantidade) VALUES('$descricao','$preco','$nomeArquivo','$path','$quantidade')") or die($mysqli->error);
             // echo "<p>Produto cadastrado com sucesso!</p>";
             echo "<script>alert('Produto cadastrado com sucesso!')</script>";
         }
@@ -54,6 +55,10 @@
         <label>
             Preço:
             <input type="text" name="preco">
+        </label>
+        <label>
+            Quantidade:
+            <input type="text" name="qtdd">
         </label>
 
         <input type="submit" name="submit" value="Salvar">

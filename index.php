@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="./styles/smallScreen.css">
     <link rel="stylesheet" href="./styles/mediumScreen.css">
     <link rel="stylesheet" href="./styles/screen.css">
+    <link rel="stylesheet" href="./styles/largeScreen.css">
+    <link rel="stylesheet" href="./styles/xLargeScreen.css">
 </head>
 <body>
     <header class="header">
@@ -77,7 +79,7 @@
                                 <a href="./pages/detalhesProduto.php?id=<?php echo $produto['id'] ?>"><img src="<?php echo $produto['path'] ?>" alt=""></a>
                                 <span class="card__description">
                                     <p class="card__nome"><?php echo $produto['descricao']; ?></p>
-                                    <p class="card__preco">R$<?php echo $produto['preco'];?></p>
+                                    <p class="card__preco">R$ <?php echo $produto['preco'];?></p>
                                 </span>
 
                                 <button>Add Car</button>
@@ -113,7 +115,7 @@
                             <img src="<?php echo $dados['path'] ?>" alt="">
                             <span id="card__description">
                                 <p><?php echo $dados['descricao']; ?></p>
-                                <p>R$<?php echo $dados['preco'];?></p>
+                                <p>R$ <?php echo $dados['preco'];?></p>
                             </span>
                         </div>   
                     </div>
