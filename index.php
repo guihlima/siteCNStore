@@ -2,7 +2,7 @@
     require('./config/conexao.php');
 
     $sql_produto = $mysqli->query("SELECT * FROM produtos") or die("Erro ao listar produtos!!" . $mysqli->error);
-    $sql_destaque = $mysqli->query("SELECT * FROM produtos WHERE destaque = 1") or die("Erro ao listar produtos!!" . $mysqli->error);
+    $sql_destaque = $mysqli->query("SELECT * FROM banner") or die("Erro ao listar produtos!!" . $mysqli->error);
 ?>
 
 
@@ -71,11 +71,16 @@
                         while($produto = $sql_produto->fetch_assoc()){
                             ?>
                             <div id="card">
+                                <div id="btn__favorite">
+                                <ion-icon id="icon__favorite" name="heart-outline" ></ion-icon>
+                                </div>
                                 <a href="./pages/detalhesProduto.php?id=<?php echo $produto['id'] ?>"><img src="<?php echo $produto['path'] ?>" alt=""></a>
                                 <span class="card__description">
                                     <p class="card__nome"><?php echo $produto['descricao']; ?></p>
                                     <p class="card__preco">R$<?php echo $produto['preco'];?></p>
                                 </span>
+
+                                <button>Add Car</button>
                             </div>
                             <?php
                         }
@@ -131,7 +136,7 @@
     </footer>
 
     <script src="./scripts/search.js"></script>
-    <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
